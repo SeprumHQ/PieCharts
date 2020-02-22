@@ -39,13 +39,13 @@ class ProgrammaticalDemo: UIViewController, PieChartDelegate {
         let alpha: CGFloat = 0.5
         
         return [
-            PieSliceModel(value: 2.1, color: UIColor.yellow.withAlphaComponent(alpha)),
-            PieSliceModel(value: 3, color: UIColor.blue.withAlphaComponent(alpha)),
-            PieSliceModel(value: 1, color: UIColor.green.withAlphaComponent(alpha)),
-            PieSliceModel(value: 4, color: UIColor.cyan.withAlphaComponent(alpha)),
-            PieSliceModel(value: 2, color: UIColor.red.withAlphaComponent(alpha)),
-            PieSliceModel(value: 1.5, color: UIColor.magenta.withAlphaComponent(alpha)),
-            PieSliceModel(value: 0.5, color: UIColor.orange.withAlphaComponent(alpha))
+            PieSliceModel(value: 2.1, colors: [UIColor.yellow.withAlphaComponent(alpha)]),
+            PieSliceModel(value: 3, colors: [UIColor.blue.withAlphaComponent(alpha)]),
+            PieSliceModel(value: 1, colors: [UIColor.green.withAlphaComponent(alpha)]),
+            PieSliceModel(value: 4, colors: [UIColor.cyan.withAlphaComponent(alpha)]),
+            PieSliceModel(value: 2, colors: [UIColor.red.withAlphaComponent(alpha)]),
+            PieSliceModel(value: 1.5, colors: [UIColor.magenta.withAlphaComponent(alpha)]),
+            PieSliceModel(value: 0.5, colors: [UIColor.orange.withAlphaComponent(alpha)])
         ]
     }
     

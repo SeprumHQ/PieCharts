@@ -11,12 +11,12 @@ import UIKit
 public class PieSliceModel: CustomDebugStringConvertible {
     
     public let value: Double
-    public let color: UIColor
+    public let colors: [CGColor]
     public let obj: Any? /// optional object to pass around e.g. to the layer's text generators
 
-    public init(value: Double, color: UIColor, obj: Any? = nil) {
+    public init(value: Double, colors: [UIColor], obj: Any? = nil) {
         self.value = value
-        self.color = color
+        self.colors = colors.map({ $0.cgColor })
         self.obj = obj
     }
     

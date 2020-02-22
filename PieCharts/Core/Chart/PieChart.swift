@@ -116,7 +116,7 @@ import UIKit
         let newEndAngle = lastEndAngle + CGFloat(angle)
         
         let data = PieSliceData(model: model, id: index, percentage: percentage)
-        let slice = PieSlice(data: data, view: PieSliceLayer(color: model.color, startAngle: lastEndAngle, endAngle: newEndAngle, animDelay: 0, center: bounds.center))
+        let slice = PieSlice(data: data, view: PieSliceLayer(colors: model.colors, startAngle: lastEndAngle, endAngle: newEndAngle, animDelay: 0, center: bounds.center))
         
         slice.view.frame = bounds
         
@@ -237,7 +237,7 @@ import UIKit
         strokeColor = UIColor.lightGray
         
         let models = (0..<6).map {_ in
-            PieSliceModel(value: 2, color: UIColor.clear)
+            PieSliceModel(value: 2, colors: [UIColor.clear])
         }
         
         self.models = models

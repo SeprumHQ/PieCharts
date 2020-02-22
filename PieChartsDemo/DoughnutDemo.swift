@@ -48,9 +48,9 @@ class DoughnutDemo: UIViewController, PieChartDelegate {
     fileprivate func createModels() -> [PieSliceModel] {
 
         let models = [
-            PieSliceModel(value: 2, color: colors[0]),
-            PieSliceModel(value: 2, color: colors[1]),
-            PieSliceModel(value: 2, color: colors[2])
+            PieSliceModel(value: 2, colors: []),
+            PieSliceModel(value: 2, colors: [colors[1]]),
+            PieSliceModel(value: 2, colors: [colors[2], colors[3]])
         ]
         
         currentColorIndex = models.count
@@ -95,7 +95,7 @@ class DoughnutDemo: UIViewController, PieChartDelegate {
     }
     
     @IBAction func onPlusTap(sender: UIButton) {
-        let newModel = PieSliceModel(value: 4 * Double(CGFloat.random()), color: colors[currentColorIndex])
+        let newModel = PieSliceModel(value: 4 * Double(CGFloat.random()), colors: [colors[currentColorIndex]])
         chartView.insertSlice(index: 0, model: newModel)
         currentColorIndex = (currentColorIndex + 1) % colors.count
         if currentColorIndex == 2 {currentColorIndex += 1} // avoid same contiguous color

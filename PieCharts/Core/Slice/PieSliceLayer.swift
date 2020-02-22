@@ -10,13 +10,13 @@ import UIKit
 import Darwin
 
 open class PieSliceLayer: CALayer, CAAnimationDelegate {
-    
-    public var color = UIColor.red {
+
+    public var colors = [UIColor.red.cgColor] {
         didSet {
             setNeedsDisplay()
         }
     }
-    
+
     fileprivate(set) var startAngle: CGFloat = 0
     fileprivate(set) var endAngle: CGFloat = 0
     
@@ -72,9 +72,8 @@ open class PieSliceLayer: CALayer, CAAnimationDelegate {
         }
     }
     
-    public init(color: UIColor, startAngle: CGFloat, endAngle: CGFloat, animDelay: Double, center: CGPoint) {
-        
-        self.color = color
+    public init(colors: [CGColor], startAngle: CGFloat, endAngle: CGFloat, animDelay: Double, center: CGPoint) {
+        self.colors = colors
         self.startAngle = startAngle
         self.endAngle = endAngle
         
@@ -83,7 +82,7 @@ open class PieSliceLayer: CALayer, CAAnimationDelegate {
         self.center = center
         
         super.init()
-        
+
         contentsScale = UIScreen.main.scale
     }
     
@@ -139,8 +138,7 @@ open class PieSliceLayer: CALayer, CAAnimationDelegate {
     
     override init(layer: Any) {
         if let pieSlice = layer as? PieSliceLayer {
-            
-            color = pieSlice.color
+            colors = pieSlice.colors
             innerRadius = pieSlice.innerRadius
             outerRadius = pieSlice.outerRadius
             
@@ -151,7 +149,7 @@ open class PieSliceLayer: CALayer, CAAnimationDelegate {
             startAngle = pieSlice.startAngle
             endAngle = pieSlice.endAngle
         }
-        
+
         super.init(layer: layer)
         
         if let pieSlice = layer as? PieSliceLayer {
@@ -208,8 +206,15 @@ open class PieSliceLayer: CALayer, CAAnimationDelegate {
         let path = createArcPath(center: center)
         ctx.addPath(path)
         self.path = path
-        
-        ctx.setFillColor(color.cgColor)
+
+        if let gradient = CGGradient(colorsSpace: nil, colors: colors as CFArray, locations: nil) {
+            ctx.clip()
+            ctx.drawRadialGradient(gradient, startCenter: center, startRadius: innerRadius,
+                                   endCenter: center, endRadius: outerRadius, options: [])
+        } else {
+            ctx.setFillColor(colors.first ?? UIColor.clear.cgColor)
+        }
+
         ctx.setStrokeColor(strokeColor.cgColor)
         ctx.setLineWidth(strokeWidth)
         

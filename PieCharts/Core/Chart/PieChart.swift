@@ -17,6 +17,9 @@ import UIKit
     
     /// Outer radius of slices.
     @IBInspectable public var outerRadius: CGFloat = 100
+
+    /// Outer radius of slices.
+    @IBInspectable public var fillSpread: CGFloat = 20
     
     /// Stroke (border) color of slices.
     @IBInspectable public var strokeColor: UIColor = UIColor.black
@@ -124,6 +127,7 @@ import UIKit
         
         slice.view.innerRadius = innerRadius
         slice.view.outerRadius = outerRadius
+        slice.view.fillSpread = fillSpread
         slice.view.selectedOffset = selectedOffset
         slice.view.animDuration = animDuration
         slice.view.strokeColor = strokeColor

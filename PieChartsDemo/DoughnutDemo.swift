@@ -48,8 +48,8 @@ class DoughnutDemo: UIViewController, PieChartDelegate {
     fileprivate func createModels() -> [PieSliceModel] {
 
         let models = [
-            PieSliceModel(value: 2, colors: []),
-            PieSliceModel(value: 2, colors: [colors[1]]),
+            PieSliceModel(value: 2, colors: [colors[0], colors[1]]),
+            PieSliceModel(value: 2, colors: [colors[1], colors[2]]),
             PieSliceModel(value: 2, colors: [colors[2], colors[3]])
         ]
         

@@ -33,6 +33,7 @@ open class PieSliceLayer: CALayer, CAAnimationDelegate {
     
     public var innerRadius: CGFloat = 50
     public var outerRadius: CGFloat = 100
+    public var fillSpread: CGFloat = 20
     var referenceAngle: CGFloat = CGFloat.pi * 3 / 2 // Top center
     public var selectedOffset: CGFloat = 30
     var animDuration: Double = 0.5
@@ -141,6 +142,7 @@ open class PieSliceLayer: CALayer, CAAnimationDelegate {
             colors = pieSlice.colors
             innerRadius = pieSlice.innerRadius
             outerRadius = pieSlice.outerRadius
+            fillSpread = pieSlice.fillSpread
             
             animDelay = pieSlice.animDelay
             
@@ -209,8 +211,10 @@ open class PieSliceLayer: CALayer, CAAnimationDelegate {
 
         if let gradient = CGGradient(colorsSpace: nil, colors: colors as CFArray, locations: nil) {
             ctx.clip()
-            ctx.drawRadialGradient(gradient, startCenter: center, startRadius: innerRadius,
-                                   endCenter: center, endRadius: outerRadius, options: [])
+
+            let startFillRadius = [innerRadius - fillSpread, CGFloat(0.0)].max()!
+            ctx.drawRadialGradient(gradient, startCenter: center, startRadius: startFillRadius,
+                                   endCenter: center, endRadius: outerRadius + fillSpread, options: [])
         } else {
             ctx.setFillColor(colors.first ?? UIColor.clear.cgColor)
         }

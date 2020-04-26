@@ -11,10 +11,7 @@ import PieCharts
 
 class ProgrammaticalDemo: UIViewController, PieChartDelegate {
     let chartView: PieChart = PieChart(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-    
-//    convenience init() {
-//        self.init(nibName: nil, bundle: nil)
-//    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(chartView)

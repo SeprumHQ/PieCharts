@@ -42,6 +42,7 @@
 		6AAD96DF1E1C07B300BABC91 /* PieCustomViewsLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAD96AB1E1C075300BABC91 /* PieCustomViewsLayer.swift */; };
 		6AC1CD4A1E1C013900120720 /* PieCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC1CD431E1C013900120720 /* PieCharts.framework */; };
 		6AC1CD4B1E1C013900120720 /* PieCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC1CD431E1C013900120720 /* PieCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE3022122455D33500044DC7 /* PiePlainLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3022112455D33500044DC7 /* PiePlainLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		6AAD96E21E1C089700BABC91 /* PieCharts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieCharts.h; sourceTree = "<group>"; };
 		6AC1CD431E1C013900120720 /* PieCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PieCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFF22B71E16DF520001B0A4 /* PieChartsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PieChartsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3022112455D33500044DC7 /* PiePlainLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiePlainLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 		6AAD969C1E1C075300BABC91 /* Impl */ = {
 			isa = PBXGroup;
 			children = (
+				EE3022132455D33B00044DC7 /* Plain */,
 				6AAD969D1E1C075300BABC91 /* Common */,
 				6AAD96A01E1C075300BABC91 /* LineText */,
 				6AAD96A51E1C075300BABC91 /* PlainText */,
@@ -324,6 +327,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EE3022132455D33B00044DC7 /* Plain */ = {
+			isa = PBXGroup;
+			children = (
+				EE3022112455D33500044DC7 /* PiePlainLayer.swift */,
+			);
+			path = Plain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -392,7 +403,7 @@
 					};
 					6AFF22B61E16DF520001B0A4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 44V72VT8L2;
+						DevelopmentTeam = U7YQT9DN9X;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
@@ -463,6 +474,7 @@
 				6AAD96DD1E1C07B300BABC91 /* AlphaPieViewLayerAnimator.swift in Sources */,
 				6AAD96D11E1C07A300BABC91 /* PieSliceData.swift in Sources */,
 				6AAD96D31E1C07A300BABC91 /* CGPoint.swift in Sources */,
+				EE3022122455D33500044DC7 /* PiePlainLayer.swift in Sources */,
 				6AAD96DF1E1C07B300BABC91 /* PieCustomViewsLayer.swift in Sources */,
 				6AAD96DE1E1C07B300BABC91 /* PieViewLayerAnimator.swift in Sources */,
 				6AAD96CD1E1C07A300BABC91 /* PieSlice.swift in Sources */,
@@ -673,7 +685,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 44V72VT8L2;
+				DEVELOPMENT_TEAM = U7YQT9DN9X;
 				INFOPLIST_FILE = "$(SRCROOT)/PieChartsDemo/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -688,7 +700,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 37QAPDY2PR;
+				DEVELOPMENT_TEAM = U7YQT9DN9X;
 				INFOPLIST_FILE = "$(SRCROOT)/PieChartsDemo/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

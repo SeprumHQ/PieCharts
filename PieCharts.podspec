@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license               = { type: 'Apache License, Version 2.0', file: 'LICENSE' }
   s.authors               = {
     'Ivan Schuetz' => 'ivanschuetz@gmail.com',
-    'Egor Iskrenkov' => 'egor@iskrenkov.com'
+    'Egor Iskrenkov' => 'egor@iskrenkov.me'
   }
 
   s.swift_version         = '4.0'

@@ -126,7 +126,7 @@ The layer system can be abstracted a step further in order to make the slices th
 
 The food images used in the demo are from freepik.com, and flaticon.com/authors/madebyoliver
 
-## Stealed from:
+## Stealed from
 
 Ivan Schütz
 

@@ -1,9 +1,4 @@
 # PieCharts
-
-[![Version](https://img.shields.io/cocoapods/v/PieCharts.svg?style=flat)](http://cocoadocs.org/docsets/PieCharts)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![License](https://img.shields.io/cocoapods/l/PieCharts.svg?style=flat)](http://cocoadocs.org/docsets/PieCharts)
-
 Easy to use and highly customizable pie charts library for iOS
 
 Swift 4.2, iOS 8+
@@ -29,16 +24,10 @@ Swift 4.2, iOS 8+
 Add to your Podfile:
 
 ```ruby
+source 'https://github.com/SeprumHQ/Podspecs.git'
+
 use_frameworks!
 pod 'PieCharts'
-```
-
-### Carthage
-
-Add to your Cartfile:
-
-```
-github "i-schuetz/PieCharts"
 ```
 
 ## Usage
@@ -137,7 +126,7 @@ The layer system can be abstracted a step further in order to make the slices th
 
 The food images used in the demo are from freepik.com, and flaticon.com/authors/madebyoliver
 
-## Created By:
+## Stealed from:
 
 Ivan Schütz
 
@@ -152,4 +141,3 @@ IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
 OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,  
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR  
 OTHER DEALINGS IN THE SOFTWARE.
-
